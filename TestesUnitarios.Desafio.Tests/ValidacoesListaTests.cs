@@ -34,19 +34,21 @@ public class ValidacoesListaTests
         Assert.True(resultado);
     }
 
-    // [Fact]
-    // public void NaoDeveConterONumero10NaLista()
-    // {
-    //     //TODO: Implementar método de teste
+    [Fact]
+    public void NaoDeveConterONumero10NaLista()
+    {
+        //TODO: Implementar método de teste
 
-    //     // Arrange
-    //     var lista = new List<int> { 5, -1, -8, 9 };
-    //     var numeroParaProcurar = 10;
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var numeroParaProcurar = 10;
 
-    //     // Act
+        // Act
+        bool resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
-    //     // Assert
-    // }
+        // Assert
+        Assert.False(resultado);
+    }
 
     // //TODO: Corrigir a anotação [Fact]
     // public void DeveMultiplicarOsElementosDaListaPor2()
