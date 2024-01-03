@@ -22,21 +22,21 @@ public class ValidacoesStringTests
         Assert.Equal(resultadoEsperado, resultado);
     }
 
-    // [Fact]
-    // public void DeveContemAPalavraQualquerNoTexto()
-    // {
-    //     // Arrange
-    //     var texto = "Esse é um texto qualquer";
-    //     var textoProcurado = "qualquer";
+    [Fact]
+    public void DeveContemAPalavraQualquerNoTexto()
+    {
+        // Arrange
+        var texto = "Esse é um texto qualquer";
+        var textoProcurado = "qualquer";
 
-    //     //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
-    //     // Act
-    //      _validacoes.ContemCaractere(texto, textoProcurado);
+        //TODO: Corrigir a chamada do método "ContemCaractere" da seção Act
+        // Act
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
-    //     // Assert
-    //     //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
-    //     Assert.True(true);
-    // }
+        // Assert
+        //TODO: Corrigir o Assert.True com base no retorno da chamada ao método
+        Assert.True(resultado);
+    }
 
     // [Fact]
     // public void NaoDeveConterAPalavraTesteNoTexto()
