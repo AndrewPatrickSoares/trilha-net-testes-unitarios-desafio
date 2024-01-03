@@ -38,20 +38,20 @@ public class ValidacoesStringTests
         Assert.True(resultado);
     }
 
-    // [Fact]
-    // public void NaoDeveConterAPalavraTesteNoTexto()
-    // {
-    //     // Arrange
-    //     var texto = "Esse é um texto qualquer";
-    //     var textoProcurado = "teste";
+    [Fact]
+    public void NaoDeveConterAPalavraTesteNoTexto()
+    {
+        // Arrange
+        var texto = "Esse é um texto qualquer";
+        var textoProcurado = "teste";
 
-    //     // Act
-    //     var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+        // Act
+        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
-    //     // Assert
-    //     //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
-    //     Assert.False(true);
-    // }
+        // Assert
+        //TODO: Corrigir o Assert.False com base no retorno da chamada ao método
+        Assert.False(resultado);
+    }
 
     // //TODO: Corrigir a anotação [Fact]
     // public void TextoDeveTerminarComAPalavraProcurado()
