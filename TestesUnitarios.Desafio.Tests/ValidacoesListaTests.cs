@@ -67,20 +67,22 @@ public class ValidacoesListaTests
         Assert.Equal(resultadoEsperado, resultado);
     }
 
-    // [Fact]
-    // public void DeveRetornar9ComoMaiorNumeroDaLista()
-    // {
-    //     //TODO: Implementar método de teste
+    [Fact]
+    public void DeveRetornar9ComoMaiorNumeroDaLista()
+    {
+        //TODO: Implementar método de teste
 
-    //     // Arrange
-    //     var lista = new List<int> { 5, -1, -8, 9 };
+        // Arrange
+        var lista = new List<int> { 5, -1, -8, 9 };
+        var maiorNumeroDeveSer = 9;
 
-    //     // Act
+        // Act
+        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
-    //     // Assert
-    //     //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
-    //     Assert.Equal(9, 9);
-    // }
+        // Assert
+        //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
+        Assert.Equal(maiorNumeroDeveSer, resultado);
+    }
 
     // [Fact]
     // public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
