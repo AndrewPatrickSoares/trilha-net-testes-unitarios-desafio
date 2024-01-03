@@ -9,9 +9,9 @@ public class ValidacoesStringTests
     [Fact]
     public void DeveRetornar6QuantidadeCaracteresDaPalavraMatrix()
     {
-        var texto = "Matrix";
-        var resultadoEsperado = 6;
-        var resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
+        string texto = "Matrix";
+        int resultadoEsperado = 6;
+        int resultado = _validacoes.RetornarQuantidadeCaracteres(texto);
 
         Assert.Equal(resultadoEsperado, resultado);
     }
@@ -19,9 +19,9 @@ public class ValidacoesStringTests
     [Fact]
     public void DeveContemAPalavraQualquerNoTexto()
     {
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "qualquer";
-        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+        string texto = "Esse é um texto qualquer";
+        string textoProcurado = "qualquer";
+        bool resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
         Assert.True(resultado);
     }
@@ -29,9 +29,9 @@ public class ValidacoesStringTests
     [Fact]
     public void NaoDeveConterAPalavraTesteNoTexto()
     {
-        var texto = "Esse é um texto qualquer";
-        var textoProcurado = "teste";
-        var resultado = _validacoes.ContemCaractere(texto, textoProcurado);
+        string texto = "Esse é um texto qualquer";
+        string textoProcurado = "teste";
+        bool resultado = _validacoes.ContemCaractere(texto, textoProcurado);
 
         Assert.False(resultado);
     }
@@ -39,9 +39,9 @@ public class ValidacoesStringTests
     [Fact]
     public void TextoDeveTerminarComAPalavraProcurado()
     {
-        var texto = "Começo, meio e fim do texto procurado";
-        var textoProcurado = "procurado";
-        var resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
+        string texto = "Começo, meio e fim do texto procurado";
+        string textoProcurado = "procurado";
+        bool resultado = _validacoes.TextoTerminaCom(texto, textoProcurado);
         
         Assert.True(resultado);
     }

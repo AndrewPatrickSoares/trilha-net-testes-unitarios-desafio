@@ -9,9 +9,9 @@ public class ValidacoesListaTests
     [Fact]
     public void DeveRemoverNumerosNegativosDeUmaLista()
     {
-        var lista = new List<int> { 5, -1, -8, 9 };
-        var resultadoEsperado = new List<int> { 5, 9 };
-        var resultado = _validacoes.RemoverNumerosNegativos(lista);
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        List<int> resultadoEsperado = new List<int> { 5, 9 };
+        List<int> resultado = _validacoes.RemoverNumerosNegativos(lista);
 
         Assert.Equal(resultadoEsperado, resultado);
     }
@@ -19,9 +19,9 @@ public class ValidacoesListaTests
     [Fact]
     public void DeveConterONumero9NaLista()
     {
-        var lista = new List<int> { 5, -1, -8, 9 };
-        var numeroParaProcurar = 9;
-        var resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int numeroParaProcurar = 9;
+        bool resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         Assert.True(resultado);
     }
@@ -29,8 +29,8 @@ public class ValidacoesListaTests
     [Fact]
     public void NaoDeveConterONumero10NaLista()
     {
-        var lista = new List<int> { 5, -1, -8, 9 };
-        var numeroParaProcurar = 10;
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int numeroParaProcurar = 10;
         bool resultado = _validacoes.ListaContemDeterminadoNumero(lista, numeroParaProcurar);
 
         Assert.False(resultado);
@@ -39,9 +39,9 @@ public class ValidacoesListaTests
     [Fact]
     public void DeveMultiplicarOsElementosDaListaPor2()
     {
-        var lista = new List<int> { 5, 7, 8, 9 };
-        var resultadoEsperado = new List<int> { 10, 14, 16, 18 };
-        var resultado = _validacoes.MultiplicarNumerosLista(lista, 2);
+        List<int> lista = new List<int> { 5, 7, 8, 9 };
+        List<int> resultadoEsperado = new List<int> { 10, 14, 16, 18 };
+        List<int> resultado = _validacoes.MultiplicarNumerosLista(lista, 2);
 
         Assert.Equal(resultadoEsperado, resultado);
     }
@@ -49,9 +49,9 @@ public class ValidacoesListaTests
     [Fact]
     public void DeveRetornar9ComoMaiorNumeroDaLista()
     {
-        var lista = new List<int> { 5, -1, -8, 9 };
-        var maiorNumeroDeveSer = 9;
-        var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int maiorNumeroDeveSer = 9;
+        int resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
         Assert.Equal(maiorNumeroDeveSer, resultado);
     }
@@ -59,9 +59,9 @@ public class ValidacoesListaTests
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
-        var lista = new List<int> { 5, -1, -8, 9 };
-        var menorNumeroDeveSer = -8;
-        var resultado = _validacoes.RetornarMenorNumeroLista(lista);
+        List<int> lista = new List<int> { 5, -1, -8, 9 };
+        int menorNumeroDeveSer = -8;
+        int resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
         Assert.Equal(menorNumeroDeveSer, resultado);
     }
